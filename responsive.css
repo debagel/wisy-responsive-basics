@@ -1,0 +1,86 @@
+/* Basis-CSS zur responsiven Darstellung eines WISY-Portals */
+
+/* Tabellen */
+
+/* Option A: Kursliste / Anbieterliste auf schmalen Bildschirmen umformen a la http://elvery.net/demo/responsive-tables/#no-more-tables */
+@media only screen and (max-width: 8px) {
+	
+	/* Tabellenkopf zugänglich ausblenden */
+	table.wisy_list thead tr { position: absolute; top: -9999px; left: -9999px; }
+	
+	/* Tabellenelemente umwandeln in Blockelemente */
+	table.wisy_list,
+	table.wisy_list thead,
+	table.wisy_list tbody,
+	table.wisy_list th,
+	table.wisy_list td,
+	table.wisy_list tr {
+		display: block;
+		border: none;
+	}
+
+	/* Umgeformte Tabelle gestalten */
+	table.wisy_list tr {
+		background-color: #eee;
+		margin-bottom: 1em;
+	}
+
+	table.wisy_list td {
+		position: relative;
+		width: auto;
+		min-height: 1.5em;
+		padding: 0.5em 0.5em 0.5em 48%;
+		border-bottom: 1px solid #fff;
+	}
+
+	table.wisy_list td:before {
+		position: absolute;
+		left: 0.5em;
+		width: 45%;
+		font-weight: bold;
+		white-space: nowrap;
+		padding-right: 1em;
+	}
+
+	/* Tabellenbeschriftung aus data-title Attribut */
+	table.wisy_list td:before { content: attr(data-title); }
+}
+
+/* Option B: Kursliste / Anbieterliste auf schmalen Bildschirmen linearisieren a la Mobilmodul */
+@media only screen and (max-width: 800px) {
+	
+	/* Tabellenkopf zugänglich ausblenden */
+	table.wisy_list thead tr { position: absolute; top: -9999px; left: -9999px; }
+	
+	/* Tabellenelemente umwandeln in Blockelemente */
+	table.wisy_list,
+	table.wisy_list thead,
+	table.wisy_list tbody,
+	table.wisy_list tr {
+		display: block;
+	}
+	
+	/* Tabellenelemente umwandeln in Inlineelemente */
+	table.wisy_list th,
+	table.wisy_list td {
+		display: inline;
+		padding: 0;
+		margin: 0;
+		border: none;
+	}
+	
+	/* Umgeformte Tabelle gestalten */
+	table.wisy_list tr {
+		padding: 0.5em;
+		border-bottom: 1px solid #eee;
+	}
+	
+	table.wisy_list .wisyr_angebot,
+	table.wisy_list .wisyr_anbieter { display: block; width: 100%; }
+	
+	table.wisy_list .wisyr_art,
+	table.wisy_list .wisyr_anbieter_telefon,
+	table.wisy_list .wisyr_anbieter_profil,
+	table.wisy_list .wisyr_termin_weitere { display: none; }
+	
+}
