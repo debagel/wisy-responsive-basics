@@ -11,8 +11,8 @@
 
 @media only screen and (min-width: 640px) {
 	#adv_all fieldset { margin-top: 1.5em; }
-	#adv_all .formrow { margin-bottom: 0.5em; }
-	#adv_all label { position: absolute; width: 22%; }
+	#adv_all .formrow { position: relative; margin-bottom: 0.5em; }
+	#adv_all label { position: absolute; width: 30%; }
 	#adv_all .formfield { margin-left: 33%; }
 }
 
