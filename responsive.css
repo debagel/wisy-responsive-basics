@@ -1,5 +1,15 @@
 /* Basis-CSS zur responsiven Darstellung eines WISY-Portals */
 
+/* Clearfix und Basics */
+.clearfix:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0;}.clearfix{display:inline-block;}* html .clearfix{height: 1%;}.clearfix{display: block;}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+.acclink { display: none; }
+
+
 /* Erweiterte Suche: Formular */
 
 #adv_all {
