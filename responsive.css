@@ -9,6 +9,10 @@ body {
 }
 .acclink { display: none; }
 
+/* Suche: Formular */
+#wisy_searcharea .formrow { display: inline; position: relative; }
+#wisy_searcharea label { display: none; }
+
 
 /* Erweiterte Suche: Formular */
 
