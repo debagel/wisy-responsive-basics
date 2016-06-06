@@ -1,0 +1,4 @@
+core=50
+
+search.suggest.v2 = 1
+searcharea.advlink =
